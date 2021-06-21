@@ -81,7 +81,7 @@ var choice4= document.querySelector("#choice4")
       if (questionIndex === questions.length) {
         endGame()
       } else {
-   //     loadQuestion()
+        loadQuestion()
       }
     }
   })
@@ -101,7 +101,7 @@ var choice4= document.querySelector("#choice4")
        if (questionIndex === questions.length) {
          endGame()
        } else {
-        //loadQuestion()
+        loadQuestion()
        }
       }
     })
@@ -121,7 +121,7 @@ var choice4= document.querySelector("#choice4")
       if (questionIndex === questions.length) {
         endGame()
       } else {
-     // loadQuestion()
+     loadQuestion()
       }
     }
   })
@@ -140,7 +140,7 @@ var choice4= document.querySelector("#choice4")
       if (questionIndex === questions.length) {
         endGame()
       } else {
-     // loadQuestion()
+     loadQuestion()
       }
     }
   })
@@ -178,3 +178,5 @@ var choice4= document.querySelector("#choice4")
       // clearInterval
       // create a form where you submit your initials
    }
+
+
