@@ -68,8 +68,6 @@ var choice4= document.querySelector("#choice4")
     }
 
   choice1.addEventListener("click", function() {
-    
-    console.log(questions[questionIndex].a)
     if (choice1.textContent === questions[questionIndex].a) {
       questionIndex++;
       if (questionIndex === questions.length) {
@@ -79,9 +77,15 @@ var choice4= document.querySelector("#choice4")
       }
     }
     else {questionIndex++;
-      timeRemaining -= 15; 
-      loadQuestion()}
-    })
+      timeRemaining -= 15;
+      if (questionIndex === questions.length) {
+        endGame()
+      } else {
+   //     loadQuestion()
+      }
+    }
+  })
+  
   choice2.addEventListener("click", function() {
     
     if (choice2.textContent === questions[questionIndex].a) {
@@ -94,8 +98,14 @@ var choice4= document.querySelector("#choice4")
     }
     else {questionIndex++;
        timeRemaining -= 15;
-        loadQuestion()}
+       if (questionIndex === questions.length) {
+         endGame()
+       } else {
+        //loadQuestion()
+       }
+      }
     })
+  
   choice3.addEventListener("click", function() {
    
     if (choice3.textContent === questions[questionIndex].a) {
@@ -107,9 +117,14 @@ var choice4= document.querySelector("#choice4")
       }
     }
     else {questionIndex++; 
-      timeRemaining -= 15; 
-      loadQuestion()}
-    })
+      timeRemaining -= 15;
+      if (questionIndex === questions.length) {
+        endGame()
+      } else {
+     // loadQuestion()
+      }
+    }
+  })
   choice4.addEventListener("click", function() {
     
     if (choice4.textContent === questions[questionIndex].a) {
@@ -121,9 +136,14 @@ var choice4= document.querySelector("#choice4")
       }
     }
     else {questionIndex++; 
-      timeRemaining -= 15; 
-      loadQuestion()}
-    })
+      timeRemaining -= 15;
+      if (questionIndex === questions.length) {
+        endGame()
+      } else {
+     // loadQuestion()
+      }
+    }
+  })
   
     
     function countDown(){
@@ -132,8 +152,9 @@ var choice4= document.querySelector("#choice4")
         clearInterval(pidClock)  
         questionsDiv.classList.add("hide")  //adding the hide class to make it invisible
         initialDiv.classList.remove("hide") // removing the hide class to make it visible
+        endGame()
       }
-      endGame()
+      
       
       TimeLeftSpan.textContent = timeRemaining
       timeRemaining = timeRemaining-1
@@ -145,16 +166,15 @@ var choice4= document.querySelector("#choice4")
       var endGameDiv = document.createElement("div")
         endGameDiv.innerText = "Your Score Is" + timeRemaining
 
-      var highScoresForm = document.createElement("form")
-        highScoresForm.setAttribute("id", "myForm")
-      var highScoresInput = document.createElement("input")
-        highScoresInput.setAttribute("type", "text")
-       // highScoresInput.appendChild("myForm")
-      var highScoresSubmit = document.createElement("button")
-        highScoresSubmit.addEventListener("click", function() {
-          document.location.href = "./highscore.html"
-
-        })
+      //var highScoresForm = document.getElementById("#initial-div")
+       // highScoresForm.setAttribute("id", "myForm")
+      //var highScoresInput = document.getElementById("#initial")
+       // highScoresInput.setAttribute("type", "text")
+       //highScoresInput.appendChild("myForm")
+      //var highScoresSubmit = document.createElement("button")
+       // highScoresSubmit.addEventListener("click", function() {
+       //   document.location.href = "./highscore.html"
+     //   })
       // clearInterval
       // create a form where you submit your initials
    }
