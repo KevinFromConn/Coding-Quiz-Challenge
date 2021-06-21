@@ -8,8 +8,11 @@ var choice1= document.querySelector("#choice1")
 var choice2= document.querySelector("#choice2")
 var choice3= document.querySelector("#choice3")
 var choice4= document.querySelector("#choice4")
+
+
     
   var questions = [
+      
       { 
         q: 'How would you write developer comments in JavaScript?', 
         c: ['<!-- --!>','// ','/* */','none of the above'],
@@ -40,7 +43,8 @@ var choice4= document.querySelector("#choice4")
       
     ];
 
-    var timeRemaining =  questions.length *15 
+    var timeRemaining = questions.length * 15
+    
 
     var questionIndex=0
 
@@ -79,6 +83,7 @@ var choice4= document.querySelector("#choice4")
     questionIndex++
     loadQuestion()
     })
+  
     
     function countDown(){
       if(timeRemaining===0)
@@ -88,7 +93,7 @@ var choice4= document.querySelector("#choice4")
         initialDiv.classList.remove("hide") // removing the hide class to make it visible
       }
       
-      TimeLeftSpan.textContent  =timeRemaining
+      TimeLeftSpan.textContent = timeRemaining
       timeRemaining--  // timeRemaining = timeRemaining-1
 
 

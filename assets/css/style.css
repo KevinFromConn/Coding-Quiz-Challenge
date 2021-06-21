@@ -1,3 +1,26 @@
 .hide {
     display: none;
-  }
+}
+.header, .description {
+    text-align: center;
+}
+.startBtn {
+    background-color: navy;
+    color: yellow;    
+}
+.button {
+    text-align: center;
+}
+.startBtn:hover {
+    background-color: yellow;
+    color: navy;
+}
+.highscores {
+    float: left;
+}
+.time-remaining {
+    float: right;
+}
+#questions {
+    text-align: center;
+}
